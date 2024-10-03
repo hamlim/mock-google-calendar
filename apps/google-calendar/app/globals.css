@@ -25,3 +25,36 @@ body {
     text-wrap: balance;
   }
 }
+
+
+.day {
+  display: flex;
+  flex-direction: column;
+  border: solid 2px black;
+  border-radius: 4px;
+}
+
+.events {
+  pointer-events: none;
+  display: flex;
+  border: solid 2px black;
+  border-radius: 4px;
+  flex-direction: row;
+  position: absolute;
+  inset: 0;
+}
+
+.hour {
+  height: 200px;
+}
+
+.hour + .hour {
+  border-top: 2px solid gray;
+}
+
+.event {
+  margin-top: calc(var(--top-offset) * 1px);
+  height: calc(var(--height) * 1px);
+  background-color: red;
+  display: block;
+}
